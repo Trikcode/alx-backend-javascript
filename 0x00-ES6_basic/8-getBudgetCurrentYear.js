@@ -12,5 +12,3 @@ export default function getBudgetForCurrentYear(income, gdp, capita) {
 
   return budget;
 }
-© 2022 GitHub, Inc.
-Term
