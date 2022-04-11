@@ -1,18 +1,16 @@
-function updateStudentGradeByCity(students, city, newGrades) {
-  const studentsInCity = students.filter((student) => student.location === city);
-  return studentsInCity.map((student) => {
-    const filteredGrades = newGrades.filter((grade) => grade.studentId === student.id);
-    if (filteredGrades.length > 0) {
-      return {
-        ...student,
-        grade: filteredGrades[0].grade,
-      };
-    }
-    return {
-      ...student,
-      grade: 'N/A',
-    };
-  });
-}
+/* eslint-disable */
+const updateUniqueItems = (map) => {
+  if (!(map instanceof Map)) {
+    throw new Error('Cannot process');
+  }
 
-export default updateStudentGradeByCity;
+  for (const [key, value] of map) {
+    if (value === 1) {
+      map.set(key, 100);
+    }
+  }
+
+  return map;
+};
+
+export default updateUniqueItems;
